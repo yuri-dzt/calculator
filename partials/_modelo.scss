@@ -1,0 +1,111 @@
+*{
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+    resize: none;
+    outline: none;
+    overflow: hidden;
+    object-fit: cover;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+$primary-color:#7A7A7A;
+$secundary-color:#001542;
+$variant-color:#085454;
+$yellow-color:#FFB30D;
+$white-color:#fff;
+
+#modelo{
+    width: 100%;
+    height: 100vh;
+    background-color: $variant-color;
+    display: grid;
+    place-items: center;
+
+    
+    .container{
+        background-color: $white-color;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 30%;
+        height: fit-content;
+        gap: 1rem 0;
+        padding:3rem;
+        border-radius: 12px;
+
+        h1{
+            font-size: 22px;
+            font-weight: 500;
+        }
+
+        .calculadora{
+            width: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 2rem 0;
+
+            tbody{
+                width: 80%;
+                height: fit-content;
+
+                tr{
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    gap: 0rem 0;
+                    
+                    td{
+                        width: 100%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        padding: .5rem;
+
+                       
+
+                        button{
+                            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+                            transition: all .2s ease;
+
+                            &:hover{
+                                background-color: #a3a3a3;
+                                color: #dfdddd;
+                            }
+                        }
+
+                        input{
+                            background-color: #e0dfdf;
+                            width: 100%;
+                            height: 80px;
+                            margin-bottom: 1rem;
+                            padding: 0 1rem;
+                            text-align: end;
+                            font-size: 28px;
+                            border-radius: 6px;
+                        }
+
+                    }
+
+                    .btn-num, .btn-clear, .btn-eq, .btn-del{    
+                        width: 100%;
+                        height: 100%;
+                        border: 1px solid #c2c2c2;
+                        padding: .6rem;
+                        font-size: 16px;
+                        border-radius: 6px;
+                        cursor: pointer;
+                    }
+
+                    .btn-eq{
+                        background-color: #c2c2c2;
+                    }
+                }
+            }
+        }
+    }
+}
